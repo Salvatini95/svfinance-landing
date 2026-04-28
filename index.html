@@ -394,22 +394,30 @@
       <a href="#funcionalidades" class="btn btn-ghost">Ver funcionalidades</a>
     </div>
 
-    <!-- STATS COM CONTADOR ANIMADO -->
+    <!-- STATS COM CONTADOR CSS PURO -->
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-num" data-target="100" data-suffix="%">0%</span>
+        <span class="hero-stat-num">
+          <span class="css-counter" style="--from:0;--to:100;--dur:1.8s">100</span>%
+        </span>
         <span class="hero-stat-label">Gratuito no beta</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-num" data-target="12" data-suffix="+">0+</span>
+        <span class="hero-stat-num">
+          <span class="css-counter" style="--from:0;--to:12;--dur:1.6s;--delay:0.2s">12</span>+
+        </span>
         <span class="hero-stat-label">Módulos integrados</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-num" data-target="3" data-suffix="">0</span>
+        <span class="hero-stat-num">
+          <span class="css-counter" style="--from:0;--to:3;--dur:1.2s;--delay:0.3s">3</span>
+        </span>
         <span class="hero-stat-label">Planos disponíveis</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-num" data-target="0" data-prefix="R$" data-suffix="">R$0</span>
+        <span class="hero-stat-num">
+          R$<span class="css-counter" style="--from:0;--to:0;--dur:0.5s">0</span>
+        </span>
         <span class="hero-stat-label">Para começar</span>
       </div>
     </div>
@@ -621,37 +629,7 @@
 </footer>
 
 <script>
-// ── CONTADOR ANIMADO NO HERO ──
-function animateCounter(el) {
-  const target = parseFloat(el.dataset.target);
-  const prefix = el.dataset.prefix || '';
-  const suffix = el.dataset.suffix || '';
-  if (isNaN(target)) return;
-
-  const duration = 1800;
-  const step     = 16;
-  const steps    = duration / step;
-  let current    = 0;
-  let frame      = 0;
-
-  // easeOutExpo
-  const ease = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-
-  const timer = setInterval(() => {
-    frame++;
-    const progress = ease(frame / steps);
-    current = Math.round(target * progress * 10) / 10;
-    if (frame >= steps) { current = target; clearInterval(timer); }
-    el.textContent = prefix + (Number.isInteger(target) ? Math.round(current) : current.toFixed(1)) + suffix;
-  }, step);
-}
-
-// Dispara quando hero entra na tela (sempre visível no load)
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.querySelectorAll('.hero-stat-num').forEach(el => animateCounter(el));
-  }, 400);
-});
+// Números já renderizados via CSS — sem JS necessário
 
 // ── SCROLL REVEAL ──
 const revealObs = new IntersectionObserver((entries) => {
