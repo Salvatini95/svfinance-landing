@@ -458,6 +458,59 @@
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    /* ── GLOW PULSE ── */
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50%       { opacity: 1;   transform: scale(1.08); }
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 40%, var(--primary) 80%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+
+    @keyframes borderGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(79,142,247,0.15); }
+      50%       { box-shadow: 0 0 40px rgba(79,142,247,0.35); }
+    }
+
+    .plan-card.featured { animation: borderGlow 3s ease-in-out infinite; }
+
+    @keyframes countUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .stat-num { animation: countUp 0.8s ease both; }
+
+    /* Stagger para stats */
+    .stat:nth-child(1) .stat-num { animation-delay: 0.1s; }
+    .stat:nth-child(2) .stat-num { animation-delay: 0.2s; }
+    .stat:nth-child(3) .stat-num { animation-delay: 0.3s; }
+    .stat:nth-child(4) .stat-num { animation-delay: 0.4s; }
+
+    /* Hover cards com glow */
+    .feature-card:hover { box-shadow: 0 8px 40px rgba(79,142,247,0.12); }
+    .module-item:hover  { box-shadow: 0 4px 20px rgba(79,142,247,0.15); }
+    .plan-card:hover    { box-shadow: 0 12px 48px rgba(79,142,247,0.2); }
+
+    /* Linha decorativa animada no hero */
+    .hero-line {
+      width: 60px; height: 2px; margin: 0 auto 28px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+      background-size: 200% auto;
+      animation: shimmer 2s linear infinite;
+    }
+
     /* ── MOBILE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 20px; }
@@ -493,7 +546,8 @@
   <div class="hero-glow"></div>
   <div>
     <div class="hero-badge">Beta gratuito — acesso liberado agora</div>
-    <h1>Controle financeiro<br/>para quem <span class="gradient-text">cresce de verdade</span></h1>
+    <div class="hero-line"></div>
+    <h1>Controle financeiro<br/>para quem <span class="shimmer-text">cresce de verdade</span></h1>
     <p>Sistema completo para MEIs, pequenas empresas e contadores. Vendas, contas, estoque, relatórios e muito mais — tudo integrado.</p>
     <div class="hero-ctas">
       <a href="https://finance-control-web-five.vercel.app" class="btn btn-primary">Criar conta gratuita →</a>
@@ -623,7 +677,7 @@
 
     <div class="plan-card">
       <div class="plan-name">Free</div>
-      <div class="plan-price">R$0<span>/mês</span></div>
+      <div class="plan-price" style="font-size:1.4rem;color:var(--accent);">Gratuito</div>
       <div class="plan-desc">Para começar e testar sem compromisso</div>
       <ul class="plan-features">
         <li>1 usuário (admin)</li>
@@ -641,7 +695,7 @@
     <div class="plan-card featured">
       <div class="plan-badge">Mais popular</div>
       <div class="plan-name">Pro</div>
-      <div class="plan-price">R$47<span>,90/mês</span></div>
+      <div class="plan-price" style="font-size:1.4rem;color:var(--muted);">Em breve</div>
       <div class="plan-desc">Para empresas que querem crescer sem limites</div>
       <ul class="plan-features">
         <li>Até 5 usuários</li>
@@ -658,7 +712,7 @@
 
     <div class="plan-card">
       <div class="plan-name">Business</div>
-      <div class="plan-price">R$89<span>,90/mês</span></div>
+      <div class="plan-price" style="font-size:1.4rem;color:var(--muted);">Em breve</div>
       <div class="plan-desc">Para empresas com equipes maiores</div>
       <ul class="plan-features">
         <li>Usuários ilimitados</li>
@@ -715,6 +769,30 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Contador animado nas stats
+  const statNums = document.querySelectorAll('.stat-num');
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el   = e.target;
+      const text = el.textContent;
+      const num  = parseFloat(text.replace(/[^0-9.]/g, ''));
+      if (isNaN(num) || num === 0) return;
+      const suffix = text.replace(/[0-9.]/g, '');
+      let start = 0;
+      const dur = 1200;
+      const step = 16;
+      const inc  = num / (dur / step);
+      const timer = setInterval(() => {
+        start += inc;
+        if (start >= num) { start = num; clearInterval(timer); }
+        el.textContent = (Number.isInteger(num) ? Math.round(start) : start.toFixed(1)) + suffix;
+      }, step);
+      statObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  statNums.forEach(el => statObserver.observe(el));
 
   // Smooth nav highlight
   const sections = document.querySelectorAll('section[id]');
