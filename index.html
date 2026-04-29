@@ -9,7 +9,7 @@
   <meta property="og:description" content="Gestão financeira completa para MEIs, pequenas empresas e contadores."/>
   <meta property="og:url" content="https://svfinance.com.br"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -17,19 +17,21 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="logo">
-    <div class="logo-icon">💎</div>
-    SV Finance
+    <img src="img/logo.png" alt="SV Finance" class="logo-img"/>
+    <span class="logo-text">SV Finance</span>
   </a>
   <div class="nav-links">
     <a href="#funcionalidades">Funcionalidades</a>
     <a href="#modulos">Módulos</a>
     <a href="#planos">Planos</a>
     <a href="#para-quem">Para quem</a>
+    <a href="#blog">Blog</a>
   </div>
   <div class="nav-actions">
     <a href="https://app.svfinance.com.br" class="btn btn-ghost">Entrar</a>
     <a href="https://app.svfinance.com.br" class="btn btn-primary">Começar grátis →</a>
   </div>
+  <button class="nav-mobile-btn" id="nav-mobile-btn">☰</button>
 </nav>
 
 <!-- HERO -->
@@ -47,14 +49,14 @@
       para quem <span class="shimmer-text">cresce de verdade</span>
     </h1>
 
-    <p>Sistema completo para MEIs, pequenas empresas e contadores. Vendas, contas, estoque e relatórios — tudo integrado.</p>
+    <p>Sistema completo para MEIs, pequenas empresas e contadores.<br/>Vendas, contas, estoque e relatórios — tudo integrado.</p>
 
     <div class="hero-ctas">
       <a href="https://app.svfinance.com.br" class="btn btn-primary">Criar conta gratuita →</a>
       <a href="#funcionalidades" class="btn btn-ghost">Ver funcionalidades</a>
     </div>
 
-    <!-- STATS — CONTADOR CSS PURO -->
+    <!-- STATS -->
     <div class="hero-stats">
       <div class="hero-stat">
         <span class="hero-stat-num">
@@ -78,6 +80,107 @@
         <span class="hero-stat-num">R$0</span>
         <span class="hero-stat-label">Para começar</span>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- MOCKUP SECTION — iPhone + Mac -->
+<div class="mockup-section reveal">
+  <div class="mockup-label">Veja o sistema em ação</div>
+  <div class="mockup-wrap">
+
+    <!-- MacBook -->
+    <div class="mac-wrap">
+      <div class="mac-frame">
+        <div class="mac-topbar">
+          <span class="mac-dot" style="background:#ff5f57"></span>
+          <span class="mac-dot" style="background:#febc2e"></span>
+          <span class="mac-dot" style="background:#28c840"></span>
+          <span class="mac-url">app.svfinance.com.br</span>
+        </div>
+        <div class="mac-screen">
+          <!-- TROQUE src pela imagem do seu dashboard -->
+          <img src="img/dashboard-preview.png" alt="SV Finance Dashboard" class="mac-img" id="mac-preview"/>
+          <!-- Fallback se não tiver a imagem ainda -->
+          <div class="mac-placeholder" id="mac-placeholder">
+            <div class="placeholder-inner">
+              <span style="font-size:2.5rem">📊</span>
+              <p>Dashboard Analytics</p>
+              <small>Substitua por: img/dashboard-preview.png</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mac-base"></div>
+      <div class="mac-foot"></div>
+    </div>
+
+    <!-- iPhone -->
+    <div class="iphone-wrap">
+      <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+          <!-- TROQUE src pela imagem mobile -->
+          <img src="img/mobile-preview.png" alt="SV Finance Mobile" class="iphone-img" id="iphone-preview"/>
+          <!-- Fallback -->
+          <div class="iphone-placeholder" id="iphone-placeholder">
+            <div class="placeholder-inner">
+              <span style="font-size:2rem">📱</span>
+              <p>App Mobile</p>
+              <small>img/mobile-preview.png</small>
+            </div>
+          </div>
+        </div>
+        <div class="iphone-home"></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="mockup-caption">Funciona no celular e no computador — sem instalar nada</p>
+</div>
+
+<!-- NICHOS -->
+<div class="section-wrap nicho-section" id="nichos">
+  <div class="reveal" style="text-align:center;margin-bottom:48px">
+    <div class="section-tag">Para o seu negócio</div>
+    <h2>Feito para o seu segmento</h2>
+    <p class="section-sub" style="margin:0 auto">Selecione seu tipo de negócio ao criar a conta e o sistema se adapta pra você.</p>
+  </div>
+  <div class="nichos-grid reveal">
+    <div class="nicho-card">
+      <span class="nicho-icon">🧮</span>
+      <h3>Contador</h3>
+      <p>Multi-empresa, relatórios profissionais e importação de dados.</p>
+    </div>
+    <div class="nicho-card">
+      <span class="nicho-icon">✂️</span>
+      <h3>Barbeiro / Salão</h3>
+      <p>Controle de caixa, comissões e gestão de clientes recorrentes.</p>
+    </div>
+    <div class="nicho-card">
+      <span class="nicho-icon">🛵</span>
+      <h3>Mototaxi / Transporte</h3>
+      <p>Registro de corridas, entradas diárias e controle de custos.</p>
+    </div>
+    <div class="nicho-card">
+      <span class="nicho-icon">💅</span>
+      <h3>Designer de Unhas / Estética</h3>
+      <p>Agendamentos, serviços por cliente e fluxo de caixa simplificado.</p>
+    </div>
+    <div class="nicho-card">
+      <span class="nicho-icon">🍔</span>
+      <h3>Restaurante / Lanchonete</h3>
+      <p>Controle de estoque, vendas e DRE para o dia a dia do food.</p>
+    </div>
+    <div class="nicho-card">
+      <span class="nicho-icon">🛒</span>
+      <h3>Loja / Comércio</h3>
+      <p>Produtos, estoque, vendas e orçamentos — tudo em um lugar.</p>
+    </div>
+    <div class="nicho-card nicho-generic">
+      <span class="nicho-icon">⚡</span>
+      <h3>Outros negócios</h3>
+      <p>Sistema genérico completo para qualquer tipo de empreendimento.</p>
     </div>
   </div>
 </div>
@@ -191,9 +294,12 @@
     <p class="section-sub" style="margin:0 auto">Sem cartão de crédito. Sem limite de tempo no beta.</p>
   </div>
   <div class="plans-grid reveal">
-    <div class="plan-card">
+
+    <div class="plan-card glass-card">
       <div class="plan-name">Free</div>
-      <div class="plan-price free">Gratuito</div>
+      <div class="plan-price-wrap">
+        <div class="plan-price free">Gratuito</div>
+      </div>
       <div class="plan-desc">Para começar sem compromisso</div>
       <ul class="plan-features">
         <li>1 usuário (admin)</li>
@@ -206,10 +312,17 @@
       </ul>
       <a href="https://app.svfinance.com.br" class="btn btn-ghost">Criar conta grátis</a>
     </div>
-    <div class="plan-card featured">
-      <div class="plan-badge">Mais popular</div>
+
+    <div class="plan-card glass-card featured">
+      <div class="plan-badge">⭐ Mais popular</div>
       <div class="plan-name">Pro</div>
-      <div class="plan-price coming">Em breve</div>
+      <div class="plan-price-wrap">
+        <div class="plan-price pro">
+          <span class="plan-currency">R$</span>49
+          <span class="plan-period">/mês</span>
+        </div>
+        <div class="plan-coming-note">Em breve · Lista de espera aberta</div>
+      </div>
       <div class="plan-desc">Para empresas sem limites</div>
       <ul class="plan-features">
         <li>Até 5 usuários</li>
@@ -221,9 +334,16 @@
       </ul>
       <a href="#newsletter" class="btn btn-primary">Entrar na lista de espera</a>
     </div>
-    <div class="plan-card">
+
+    <div class="plan-card glass-card">
       <div class="plan-name">Business</div>
-      <div class="plan-price coming">Em breve</div>
+      <div class="plan-price-wrap">
+        <div class="plan-price business">
+          <span class="plan-currency">R$</span>99
+          <span class="plan-period">/mês</span>
+        </div>
+        <div class="plan-coming-note">Em breve · Lista de espera aberta</div>
+      </div>
       <div class="plan-desc">Para equipes maiores</div>
       <ul class="plan-features">
         <li>Usuários ilimitados</li>
@@ -235,6 +355,43 @@
       </ul>
       <a href="#newsletter" class="btn btn-ghost">Entrar na lista de espera</a>
     </div>
+
+  </div>
+</div>
+
+<!-- BLOG -->
+<div class="section-wrap" id="blog">
+  <div class="reveal" style="text-align:center;margin-bottom:48px">
+    <div class="section-tag">Blog</div>
+    <h2>Aprenda a gerir seu negócio</h2>
+    <p class="section-sub" style="margin:0 auto">Dicas práticas de gestão financeira para MEIs e pequenas empresas.</p>
+  </div>
+  <div class="blog-grid reveal">
+
+    <div class="blog-card">
+      <div class="blog-tag">Financeiro</div>
+      <h3>O que é DRE e por que todo MEI deveria fazer</h3>
+      <p>Demonstrativo de Resultado do Exercício parece complicado, mas é simples — e pode salvar seu negócio.</p>
+      <a href="#" class="blog-link">Ler artigo →</a>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-tag">Gestão</div>
+      <h3>Fluxo de caixa: como saber se você está lucrando de verdade</h3>
+      <p>Faturamento alto não é sinônimo de lucro. Entenda a diferença e como controlar na prática.</p>
+      <a href="#" class="blog-link">Ler artigo →</a>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-tag">Estoque</div>
+      <h3>Custo médio ponderado: o que é e como calcular</h3>
+      <p>Aprenda a precificar seus produtos corretamente com o método mais usado no Brasil.</p>
+      <a href="#" class="blog-link">Ler artigo →</a>
+    </div>
+
+  </div>
+  <div style="text-align:center;margin-top:40px">
+    <a href="#" class="btn btn-ghost">Ver todos os artigos →</a>
   </div>
 </div>
 
@@ -269,13 +426,14 @@
 <!-- FOOTER -->
 <footer>
   <a href="#" class="logo" style="font-size:1.1rem">
-    <div class="logo-icon" style="width:26px;height:26px;font-size:13px">💎</div>
-    SV Finance
+    <img src="img/logo.png" alt="SV Finance" class="logo-img" style="width:28px;height:28px"/>
+    <span class="logo-text">SV Finance</span>
   </a>
   <div class="footer-links">
     <a href="#funcionalidades">Funcionalidades</a>
     <a href="#planos">Planos</a>
     <a href="#para-quem">Para quem</a>
+    <a href="#blog">Blog</a>
     <a href="#newsletter">Newsletter</a>
     <a href="https://app.svfinance.com.br">Acessar sistema</a>
   </div>

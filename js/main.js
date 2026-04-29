@@ -36,7 +36,6 @@
     'R$0', 'DRE', 'MEI', '+R$1.2k', '99%'
   ]
 
-  // 3 camadas: fundo lento/pequeno → frente rápido/grande
   const layers = [
     { count: 10, speedMin: 0.25, speedMax: 0.55, sizeMin: 9,  sizeMax: 12, opacityMax: 0.07 },
     { count: 8,  speedMin: 0.55, speedMax: 1.0,  sizeMin: 13, sizeMax: 17, opacityMax: 0.11 },
@@ -62,8 +61,6 @@
     }
   })
 
-  // Fade suave no scroll — começa a desaparecer aos 40% da hero,
-  // some completamente ao chegar na próxima seção
   let canvasOpacity = 1
   window.addEventListener('scroll', () => {
     const heroH   = hero.offsetHeight
@@ -79,24 +76,15 @@
       animId = requestAnimationFrame(animate)
       return
     }
-
-    // throttle ~30fps para não pesar na landing
     if (timestamp - lastTime < 34) { animId = requestAnimationFrame(animate); return }
     lastTime = timestamp
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-
     particles.forEach(p => {
       p.y -= p.speed
       p.x += p.drift
-
-      // fade in ao surgir
       if (p.opacity < p.maxOpacity) p.opacity += 0.002
-
-      // fade out no topo da hero (20% superior)
       if (p.y < canvas.height * 0.2) p.opacity -= 0.005
-
-      // reposiciona quando sai de cena
       if (p.y < -40 || p.opacity <= 0) {
         p.y       = canvas.height + Math.random() * 150
         p.x       = Math.random() * canvas.width
@@ -107,18 +95,30 @@
         const l    = layers[p.layer]
         p.speed    = l.speedMin + Math.random() * (l.speedMax - l.speedMin)
       }
-
       ctx.globalAlpha = Math.max(0, p.opacity)
-      // positivos em verde, negativos/neutros em índigo
       ctx.fillStyle = p.positive ? '#22c55e' : '#818cf8'
       ctx.font = `${Math.round(p.size)}px monospace`
       ctx.fillText(p.symbol, p.x, p.y)
     })
-
     ctx.globalAlpha = 1
     animId = requestAnimationFrame(animate)
   }
   animId = requestAnimationFrame(animate)
+})()
+
+// ── FALLBACK IMAGENS MOCKUP ─────────────────────────────────
+;(function () {
+  function checkImg (imgId, placeholderId) {
+    const img = document.getElementById(imgId)
+    const ph  = document.getElementById(placeholderId)
+    if (!img || !ph) return
+    img.addEventListener('load', () => { ph.style.display = 'none' })
+    img.addEventListener('error', () => { img.style.display = 'none'; ph.style.display = 'flex' })
+    if (img.complete && img.naturalWidth > 0) { ph.style.display = 'none' }
+    else if (img.complete) { img.style.display = 'none'; ph.style.display = 'flex' }
+  }
+  checkImg('mac-preview', 'mac-placeholder')
+  checkImg('iphone-preview', 'iphone-placeholder')
 })()
 
 // ── SCROLL REVEAL ───────────────────────────────────────────
@@ -151,7 +151,6 @@ if (form) {
     e.preventDefault()
     const email = form.querySelector('input').value
     console.log('Newsletter:', email)
-    // TODO: integrar com POST /api/newsletter
     form.style.display = 'none'
     document.getElementById('nl-success').style.display = 'block'
   })
