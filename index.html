@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SV Finance — Controle Financeiro Inteligente</title>
-  <meta name="description" content="Sistema completo de gestão financeira para MEIs, pequenas empresas e contadores."/>
-  <meta property="og:title" content="SV Finance — Controle Financeiro Inteligente"/>
-  <meta property="og:description" content="Gestão financeira completa para MEIs, pequenas empresas e contadores."/>
+  <title>SV Finance — Gestão Financeira para Negócios que Crescem</title>
+  <meta name="description" content="Sistema completo de gestão financeira para MEIs, lojas, barbeiros, restaurantes e contadores. Mais simples que o Omie. Mais barato que o Conta Azul."/>
+  <meta property="og:title" content="SV Finance — Gestão Financeira Inteligente"/>
+  <meta property="og:description" content="ERP completo para pequenas empresas. Vendas, estoque, NF-e e relatórios — a partir de R$49/mês."/>
   <meta property="og:url" content="https://svfinance.com.br"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -15,24 +15,41 @@
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="main-nav">
   <a href="#" class="logo">
     <img src="img/logo.png" alt="SV Finance" class="logo-img"/>
     <span class="logo-text">SV Finance</span>
   </a>
   <div class="nav-links">
+    <a href="#segmentos">Segmentos</a>
     <a href="#funcionalidades">Funcionalidades</a>
-    <a href="#modulos">Módulos</a>
     <a href="#planos">Planos</a>
-    <a href="#para-quem">Para quem</a>
+    <a href="#comparativo">Comparativo</a>
     <a href="#blog">Blog</a>
   </div>
   <div class="nav-actions">
     <a href="https://app.svfinance.com.br" class="btn btn-ghost">Entrar</a>
-    <a href="https://app.svfinance.com.br" class="btn btn-primary">Começar grátis →</a>
+    <a href="https://app.svfinance.com.br" class="btn btn-primary">Testar grátis →</a>
   </div>
   <button class="nav-mobile-btn" id="nav-mobile-btn">☰</button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-header">
+    <span class="logo-text" style="font-family:'Bodoni Moda',serif;letter-spacing:4px">SV Finance</span>
+    <button id="mobile-menu-close">✕</button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="#segmentos" onclick="closeMobileMenu()">Segmentos</a>
+    <a href="#funcionalidades" onclick="closeMobileMenu()">Funcionalidades</a>
+    <a href="#planos" onclick="closeMobileMenu()">Planos</a>
+    <a href="#comparativo" onclick="closeMobileMenu()">Comparativo</a>
+    <a href="https://app.svfinance.com.br" class="btn btn-ghost" style="margin-top:8px">Entrar</a>
+    <a href="https://app.svfinance.com.br" class="btn btn-primary">Testar grátis →</a>
+  </div>
+</div>
+<div class="mobile-menu-overlay" id="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
 
 <!-- HERO -->
 <div class="hero">
@@ -41,53 +58,52 @@
   <div class="orb orb-3"></div>
 
   <div class="hero-content">
-    <div class="hero-badge">Beta gratuito — acesso liberado agora</div>
-    <div class="hero-line"></div>
+    <div class="hero-badge">✦ Sem cartão de crédito · Comece grátis hoje</div>
 
     <h1>
-      Controle financeiro<br/>
-      para quem <span class="shimmer-text">cresce de verdade</span>
+      O ERP que seu negócio<br/>
+      precisava para <span class="shimmer-text">crescer de verdade</span>
     </h1>
 
-    <p>Sistema completo para MEIs, pequenas empresas e contadores.<br/>Vendas, contas, estoque e relatórios — tudo integrado.</p>
+    <p>Vendas, estoque, NF-e e financeiro integrados.<br/>
+    Mais simples que o Omie. 6× mais barato que o Conta Azul.</p>
 
     <div class="hero-ctas">
-      <a href="https://app.svfinance.com.br" class="btn btn-primary">Criar conta gratuita →</a>
+      <a href="https://app.svfinance.com.br" class="btn btn-primary btn-hero">Criar conta gratuita →</a>
       <a href="#funcionalidades" class="btn btn-ghost">Ver funcionalidades</a>
+    </div>
+
+    <div class="hero-proof">
+      <span>✓ Grátis para começar</span>
+      <span>✓ Sem limite de tempo no beta</span>
+      <span>✓ Cancele quando quiser</span>
     </div>
 
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-num">
-          <span class="count" style="--to:100;--dur:1.8s">100</span>%
-        </span>
-        <span class="hero-stat-label">Gratuito no beta</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">
-          <span class="count" style="--to:12;--dur:1.5s;--delay:0.2s">12</span>+
-        </span>
+        <span class="hero-stat-num"><span class="count" style="--to:12;--dur:1.5s">12</span>+</span>
         <span class="hero-stat-label">Módulos integrados</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-num">
-          <span class="count" style="--to:3;--dur:1.2s;--delay:0.3s">3</span>
-        </span>
-        <span class="hero-stat-label">Planos disponíveis</span>
+        <span class="hero-stat-num">R$<span class="count" style="--to:49;--dur:1.8s;--delay:0.2s">49</span></span>
+        <span class="hero-stat-label">Por mês no Pro</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-num">R$0</span>
-        <span class="hero-stat-label">Para começar</span>
+        <span class="hero-stat-num"><span class="count" style="--to:7;--dur:1.2s;--delay:0.3s">7</span></span>
+        <span class="hero-stat-label">Segmentos de negócio</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">6×</span>
+        <span class="hero-stat-label">Mais barato que concorrentes</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MOCKUP SECTION — iPhone + Mac -->
+<!-- MOCKUP -->
 <div class="mockup-section reveal">
   <div class="mockup-label">Veja o sistema em ação</div>
   <div class="mockup-wrap">
-
     <div class="mac-wrap">
       <div class="mac-frame">
         <div class="mac-topbar">
@@ -99,82 +115,93 @@
         <div class="mac-screen">
           <img src="img/dashboard-preview.png" alt="SV Finance Dashboard" class="mac-img" id="mac-preview"/>
           <div class="mac-placeholder" id="mac-placeholder">
-            <div class="placeholder-inner">
-              <span style="font-size:2.5rem">📊</span>
-              <p>Dashboard Analytics</p>
-              <small>img/dashboard-preview.png</small>
-            </div>
+            <div class="placeholder-inner"><span style="font-size:2.5rem">📊</span><p>Dashboard Analytics</p><small>img/dashboard-preview.png</small></div>
           </div>
         </div>
       </div>
       <div class="mac-base"></div>
       <div class="mac-foot"></div>
     </div>
-
     <div class="iphone-wrap">
       <div class="iphone-frame">
         <div class="iphone-notch"></div>
         <div class="iphone-screen">
           <img src="img/mobile-preview.png" alt="SV Finance Mobile" class="iphone-img" id="iphone-preview"/>
           <div class="iphone-placeholder" id="iphone-placeholder">
-            <div class="placeholder-inner">
-              <span style="font-size:2rem">📱</span>
-              <p>App Mobile</p>
-              <small>img/mobile-preview.png</small>
-            </div>
+            <div class="placeholder-inner"><span style="font-size:2rem">📱</span><p>App Mobile</p><small>img/mobile-preview.png</small></div>
           </div>
         </div>
         <div class="iphone-home"></div>
       </div>
     </div>
-
   </div>
   <p class="mockup-caption">Funciona no celular e no computador — sem instalar nada</p>
 </div>
 
-<!-- NICHOS -->
-<div class="section-wrap nicho-section" id="nichos">
-  <div class="reveal" style="text-align:center;margin-bottom:48px">
+<!-- SEGMENTOS COM FOTO -->
+<div class="section-wrap" id="segmentos">
+  <div class="reveal" style="text-align:center;margin-bottom:56px">
     <div class="section-tag">Para o seu negócio</div>
     <h2>Feito para o seu segmento</h2>
-    <p class="section-sub" style="margin:0 auto">Selecione seu tipo de negócio ao criar a conta e o sistema se adapta pra você.</p>
+    <p class="section-sub" style="margin:0 auto">Selecione seu tipo de negócio ao criar a conta e o sistema se adapta completamente para você.</p>
   </div>
-  <div class="nichos-grid reveal">
-    <div class="nicho-card">
-      <span class="nicho-icon">🧮</span>
-      <h3>Contador</h3>
-      <p>Multi-empresa, relatórios profissionais e importação de dados.</p>
+
+  <div class="segments-grid reveal">
+
+    <!-- CARD GRANDE: Loja de Roupas / Streetwear -->
+    <div class="segment-card segment-featured" style="
+      background: linear-gradient(160deg, rgba(0,0,0,0.85) 0%, rgba(15,10,5,0.9) 100%),
+      url('img/streetwear-store.jpg') center/cover no-repeat;
+    ">
+      <div class="segment-content">
+        <div class="segment-tag">Em destaque</div>
+        <div class="segment-icon">👗</div>
+        <h3>Lojas de Roupa & Streetwear</h3>
+        <p>Controle de grade (tamanho × cor), PDV, etiquetas com código de barras, troca/devolução e coleções por temporada.</p>
+        <div class="segment-chips">
+          <span>Grade P/M/G/GG</span>
+          <span>PDV</span>
+          <span>Estoque por cor</span>
+          <span>Coleções</span>
+        </div>
+        <a href="https://app.svfinance.com.br" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center">Começar grátis →</a>
+      </div>
     </div>
-    <div class="nicho-card">
-      <span class="nicho-icon">✂️</span>
-      <h3>Barbeiro / Salão</h3>
-      <p>Controle de caixa, comissões e gestão de clientes recorrentes.</p>
+
+    <!-- DEMAIS SEGMENTOS -->
+    <div class="segment-small-grid">
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-barbeiro.jpg') center/cover">
+        <div class="segment-icon-sm">✂️</div>
+        <h4>Barbeiro & Salão</h4>
+        <p>Caixa, comissões e clientes recorrentes.</p>
+      </div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-restaurante.jpg') center/cover">
+        <div class="segment-icon-sm">🍔</div>
+        <h4>Restaurante & Food</h4>
+        <p>Estoque, vendas e DRE para o food service.</p>
+      </div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-estetica.jpg') center/cover">
+        <div class="segment-icon-sm">💅</div>
+        <h4>Estética & Beleza</h4>
+        <p>Serviços, agenda e fluxo de caixa simplificado.</p>
+      </div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-contador.jpg') center/cover">
+        <div class="segment-icon-sm">🧮</div>
+        <h4>Contador</h4>
+        <p>Multi-empresa, relatórios e importação de dados.</p>
+      </div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-mototaxi.jpg') center/cover">
+        <div class="segment-icon-sm">🛵</div>
+        <h4>Mototaxi & Transporte</h4>
+        <p>Corridas, entradas diárias e controle de custos.</p>
+      </div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95))">
+        <div class="segment-icon-sm">⚡</div>
+        <h4>Outros negócios</h4>
+        <p>Sistema genérico para qualquer empreendimento.</p>
+      </div>
     </div>
-    <div class="nicho-card">
-      <span class="nicho-icon">🛵</span>
-      <h3>Mototaxi / Transporte</h3>
-      <p>Registro de corridas, entradas diárias e controle de custos.</p>
-    </div>
-    <div class="nicho-card">
-      <span class="nicho-icon">💅</span>
-      <h3>Designer de Unhas / Estética</h3>
-      <p>Agendamentos, serviços por cliente e fluxo de caixa simplificado.</p>
-    </div>
-    <div class="nicho-card">
-      <span class="nicho-icon">🍔</span>
-      <h3>Restaurante / Lanchonete</h3>
-      <p>Controle de estoque, vendas e DRE para o dia a dia do food.</p>
-    </div>
-    <div class="nicho-card">
-      <span class="nicho-icon">🛒</span>
-      <h3>Loja / Comércio</h3>
-      <p>Produtos, estoque, vendas e orçamentos — tudo em um lugar.</p>
-    </div>
-    <div class="nicho-card nicho-generic">
-      <span class="nicho-icon">⚡</span>
-      <h3>Outros negócios</h3>
-      <p>Sistema genérico completo para qualquer tipo de empreendimento.</p>
-    </div>
+
   </div>
 </div>
 
@@ -194,12 +221,12 @@
     <div class="feature-card">
       <div class="feature-icon">🛒</div>
       <h3>Vendas e Orçamentos</h3>
-      <p>Emita PED e OS, converta orçamentos em vendas com um clique e gere relatórios de faturamento.</p>
+      <p>Emita PED e OS, converta orçamentos em vendas com um clique e gere PDFs profissionais.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">💰</div>
-      <h3>Controle Financeiro</h3>
-      <p>Transações, contas a pagar e receber, DRE e fluxo de caixa com filtros por período.</p>
+      <div class="feature-icon">🧾</div>
+      <h3>NF-e integrada</h3>
+      <p>Emita notas fiscais eletrônicas direto do sistema. Dados fiscais salvos por empresa, produto e cliente.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">📦</div>
@@ -207,14 +234,29 @@
       <p>Custo médio ponderado, alertas de mínimo e movimentações automáticas a cada venda.</p>
     </div>
     <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <h3>Controle Financeiro</h3>
+      <p>Transações, contas a pagar e receber, DRE e fluxo de caixa com filtros por período.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎨</div>
+      <h3>Brand Studio com IA</h3>
+      <p>Crie artes para redes sociais com IA, remova fundos e exporte em alta resolução. Exclusivo SV Finance.</p>
+    </div>
+    <div class="feature-card">
       <div class="feature-icon">👥</div>
-      <h3>Clientes e Equipe</h3>
-      <p>Carteira de clientes, perfis por função (admin, vendedor, financeiro) e comissões.</p>
+      <h3>Equipe com Permissões</h3>
+      <p>Perfis por função: admin, vendedor, financeiro e estoque. Cada um vê só o que precisa.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">📂</div>
       <h3>Importação Inteligente</h3>
       <p>Importe do Conta Azul, Omie, Nibo e Linx com detecção automática de formato.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Metas Financeiras</h3>
+      <p>Defina metas mensais e acompanhe o progresso com alertas automáticos ao atingir 50% e 100%.</p>
     </div>
   </div>
 </div>
@@ -235,56 +277,101 @@
     <div class="module-chip"><span class="icon">📦</span><span class="name">Produtos e Estoque</span></div>
     <div class="module-chip"><span class="icon">🧾</span><span class="name">Orçamentos com PDF</span></div>
     <div class="module-chip"><span class="icon">🛒</span><span class="name">Vendas PED e OS</span></div>
+    <div class="module-chip"><span class="icon">📋</span><span class="name">NF-e Eletrônica</span></div>
     <div class="module-chip"><span class="icon">👥</span><span class="name">Clientes</span></div>
     <div class="module-chip"><span class="icon">👤</span><span class="name">Equipe e Permissões</span></div>
     <div class="module-chip"><span class="icon">💸</span><span class="name">Comissões por Vendedor</span></div>
     <div class="module-chip"><span class="icon">🎯</span><span class="name">Metas Financeiras</span></div>
+    <div class="module-chip"><span class="icon">🎨</span><span class="name">Brand Studio IA</span></div>
     <div class="module-chip"><span class="icon">📂</span><span class="name">Importação e Exportação</span></div>
     <div class="module-chip"><span class="icon">🔔</span><span class="name">Alertas Automáticos</span></div>
+    <div class="module-chip"><span class="icon">👤</span><span class="name">Controle Pessoal PF</span></div>
   </div>
 </div>
 
-<!-- PARA QUEM -->
-<div class="section-wrap" id="para-quem">
-  <div class="reveal">
-    <div class="section-tag">Para quem</div>
-    <h2>Feito para quem trabalha de verdade</h2>
-    <p class="section-sub">Autônomo, dono de empresa ou contador — o SV Finance se adapta.</p>
+<!-- COMPARATIVO -->
+<div class="section-wrap" id="comparativo">
+  <div class="reveal" style="text-align:center;margin-bottom:56px">
+    <div class="section-tag">Comparativo</div>
+    <h2>Por que escolher o SV Finance?</h2>
+    <p class="section-sub" style="margin:0 auto">Compare e veja por que somos a escolha mais inteligente para o seu negócio.</p>
   </div>
-  <div class="forwho-grid reveal">
-    <div class="forwho-card">
-      <span class="card-icon">🏪</span>
-      <h3>MEIs e Pequenas Empresas</h3>
-      <p>Controle seu negócio sem precisar de contador no dia a dia.</p>
-      <ul class="forwho-list">
-        <li>Controle de vendas e faturamento</li>
-        <li>Contas a pagar e receber</li>
-        <li>Estoque e produtos</li>
-        <li>DRE e fluxo de caixa</li>
-        <li>Orçamentos em PDF</li>
-      </ul>
+  <div class="compare-table reveal">
+    <div class="compare-header">
+      <div class="compare-cell compare-feature-col"></div>
+      <div class="compare-cell">Omie</div>
+      <div class="compare-cell">Conta Azul</div>
+      <div class="compare-cell compare-highlight">SV Finance</div>
     </div>
-    <div class="forwho-card">
-      <span class="card-icon">📋</span>
-      <h3>Contadores e Escritórios</h3>
-      <p>Gerencie múltiplas empresas com dados isolados por perfil.</p>
-      <ul class="forwho-list">
-        <li>Multi-empresa com isolamento total</li>
-        <li>Exportação CSV e Excel</li>
-        <li>Importação Conta Azul, Omie e Nibo</li>
-        <li>Relatórios profissionais em PDF</li>
-        <li>Controle de acesso por função</li>
-      </ul>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Preço mensal</div>
+      <div class="compare-cell compare-bad">R$ 297</div>
+      <div class="compare-cell compare-bad">R$ 119</div>
+      <div class="compare-cell compare-good compare-highlight">A partir de R$ 49</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Plano gratuito</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-yes compare-highlight">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">NF-e de produto</div>
+      <div class="compare-cell compare-yes">✓</div>
+      <div class="compare-cell compare-yes">✓</div>
+      <div class="compare-cell compare-yes compare-highlight">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Vendas e estoque</div>
+      <div class="compare-cell compare-yes">✓</div>
+      <div class="compare-cell compare-yes">✓</div>
+      <div class="compare-cell compare-yes compare-highlight">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Comissões por vendedor</div>
+      <div class="compare-cell compare-yes">✓</div>
+      <div class="compare-cell compare-partial">Parcial</div>
+      <div class="compare-cell compare-yes compare-highlight">✓</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Brand Studio com IA</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-yes compare-highlight">✓ Exclusivo</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Controle pessoal (PF)</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-yes compare-highlight">✓ Exclusivo</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Gestão por nicho</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-yes compare-highlight">✓ Exclusivo</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Metas financeiras</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-yes compare-highlight">✓ Exclusivo</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell compare-feature-col">Design moderno</div>
+      <div class="compare-cell compare-no">✗</div>
+      <div class="compare-cell compare-partial">Básico</div>
+      <div class="compare-cell compare-yes compare-highlight">✓ Glassmorphism</div>
     </div>
   </div>
 </div>
 
 <!-- PLANOS -->
 <div class="section-wrap" id="planos">
-  <div class="reveal" style="text-align:center;margin-bottom:48px">
+  <div class="reveal" style="text-align:center;margin-bottom:56px">
     <div class="section-tag">Planos</div>
     <h2>Comece grátis, escale quando quiser</h2>
-    <p class="section-sub" style="margin:0 auto">Sem cartão de crédito. Sem limite de tempo no beta.</p>
+    <p class="section-sub" style="margin:0 auto">Sem cartão de crédito. Sem pegadinha. Cancele quando quiser.</p>
   </div>
   <div class="plans-grid reveal">
 
@@ -294,15 +381,17 @@
         <div class="plan-price free">Gratuito</div>
         <div class="plan-coming-note">Disponível agora · Sem cartão</div>
       </div>
-      <div class="plan-desc">Para começar sem compromisso</div>
+      <div class="plan-desc">Para quem está começando</div>
       <ul class="plan-features">
-        <li>1 usuário (admin)</li>
+        <li>1 usuário administrador</li>
         <li>Até 50 clientes</li>
         <li>Até 20 produtos</li>
         <li>100 transações/mês</li>
-        <li class="no">Export CSV/Excel</li>
-        <li class="no">Relatórios PDF</li>
-        <li class="no">Equipe</li>
+        <li>Dashboard e relatórios básicos</li>
+        <li class="no">NF-e eletrônica</li>
+        <li class="no">Brand Studio com IA</li>
+        <li class="no">Equipe e comissões</li>
+        <li class="no">Export PDF/Excel</li>
       </ul>
       <a href="https://app.svfinance.com.br" class="btn btn-ghost">Criar conta grátis</a>
     </div>
@@ -311,39 +400,53 @@
       <div class="plan-badge">⭐ Mais popular</div>
       <div class="plan-name">Pro</div>
       <div class="plan-price-wrap">
-        <div class="plan-price pro" style="font-size:1.3rem;color:var(--primary)">Em breve</div>
-        <div class="plan-coming-note">Garanta seu lugar · Lista de espera aberta</div>
+        <div class="plan-price pro">
+          <span class="plan-currency">R$</span>49<span class="plan-period">/mês</span>
+        </div>
+        <div class="plan-coming-note">Em breve · Entre na lista de espera</div>
       </div>
       <div class="plan-desc">Para empresas sem limites</div>
       <ul class="plan-features">
         <li>Até 5 usuários</li>
-        <li>Tudo ilimitado</li>
-        <li>Export CSV/Excel</li>
-        <li>Relatórios PDF</li>
+        <li>Clientes, produtos e transações ilimitados</li>
+        <li>NF-e eletrônica</li>
+        <li>Brand Studio com IA</li>
         <li>Equipe com permissões</li>
         <li>Comissões por vendedor</li>
+        <li>Export CSV/Excel/PDF</li>
+        <li>Alertas automáticos avançados</li>
+        <li>Metas financeiras</li>
       </ul>
-      <a href="#newsletter" class="btn btn-primary">Entrar na lista de espera</a>
+      <a href="#newsletter" class="btn btn-primary">Garantir meu lugar →</a>
     </div>
 
     <div class="plan-card glass-card">
       <div class="plan-name">Business</div>
       <div class="plan-price-wrap">
-        <div class="plan-price business" style="font-size:1.3rem;color:var(--muted)">Em breve</div>
-        <div class="plan-coming-note">Garanta seu lugar · Lista de espera aberta</div>
+        <div class="plan-price business">
+          <span class="plan-currency">R$</span>99<span class="plan-period">/mês</span>
+        </div>
+        <div class="plan-coming-note">Em breve · Entre na lista de espera</div>
       </div>
-      <div class="plan-desc">Para equipes maiores</div>
+      <div class="plan-desc">Para times e redes maiores</div>
       <ul class="plan-features">
         <li>Usuários ilimitados</li>
-        <li>Tudo ilimitado</li>
-        <li>Export CSV/Excel</li>
-        <li>Relatórios PDF</li>
-        <li>Equipe com permissões</li>
+        <li>Tudo do plano Pro</li>
+        <li>Multi-empresa</li>
         <li>Suporte prioritário</li>
+        <li>Relatórios personalizados</li>
+        <li>API de integração</li>
       </ul>
-      <a href="#newsletter" class="btn btn-ghost">Entrar na lista de espera</a>
+      <a href="#newsletter" class="btn btn-ghost">Garantir meu lugar →</a>
     </div>
 
+  </div>
+
+  <!-- Mini comparativo de preço -->
+  <div class="price-compare-note reveal">
+    <span>💡 Economia real:</span>
+    Enquanto o Omie cobra <strong>R$297/mês</strong> e o Conta Azul <strong>R$119/mês</strong>,
+    o SV Finance Pro sai por apenas <strong>R$49/mês</strong> — com funcionalidades exclusivas que eles não têm.
   </div>
 </div>
 
@@ -368,9 +471,9 @@
       <a href="#" class="blog-link">Ler artigo →</a>
     </div>
     <div class="blog-card">
-      <div class="blog-tag">Estoque</div>
-      <h3>Custo médio ponderado: o que é e como calcular</h3>
-      <p>Aprenda a precificar seus produtos corretamente com o método mais usado no Brasil.</p>
+      <div class="blog-tag">Loja de Roupas</div>
+      <h3>Como controlar estoque de roupas por tamanho e cor</h3>
+      <p>Grade de produtos, giro de estoque e curva ABC para lojas de moda e streetwear.</p>
       <a href="#" class="blog-link">Ler artigo →</a>
     </div>
   </div>
@@ -379,24 +482,30 @@
   </div>
 </div>
 
-<!-- NEWSLETTER -->
+<!-- NEWSLETTER / LISTA DE ESPERA -->
 <div class="newsletter-wrap" id="newsletter">
   <div class="newsletter-card reveal">
-    <div class="section-tag">Newsletter</div>
-    <h2>Fique por dentro das novidades</h2>
-    <p>Receba atualizações sobre novas funcionalidades, dicas de gestão e o lançamento dos planos pagos.</p>
+    <div class="section-tag">Lista de espera</div>
+    <h2>Seja o primeiro a saber<br/>quando o Pro lançar</h2>
+    <p>Entre na lista e garanta <strong style="color:var(--accent)">30 dias grátis</strong> no plano Pro quando lançarmos.</p>
+    <div class="newsletter-benefits">
+      <span>✓ 30 dias grátis no Pro</span>
+      <span>✓ Preço de early adopter</span>
+      <span>✓ Suporte prioritário</span>
+    </div>
     <form class="newsletter-form" id="nl-form">
-      <input type="email" class="newsletter-input" placeholder="Seu melhor email" required/>
-      <button type="submit" class="btn btn-primary">Quero receber →</button>
+      <input type="text" class="newsletter-input" placeholder="Seu nome" id="nl-name" required/>
+      <input type="email" class="newsletter-input" placeholder="Seu melhor email" id="nl-email" required/>
+      <button type="submit" class="btn btn-primary">Garantir meu lugar →</button>
     </form>
     <div class="newsletter-success" id="nl-success">
-      ✅ Incrível! Você está na lista. Avisaremos em primeira mão!
+      🎉 Incrível! Você está na lista. Avisaremos em primeira mão com desconto exclusivo!
     </div>
     <p style="margin-top:16px;font-size:12px;color:var(--muted)">Sem spam. Cancele quando quiser.</p>
   </div>
 </div>
 
-<!-- CTA -->
+<!-- CTA FINAL -->
 <div class="cta-section reveal">
   <div class="section-tag">Comece hoje</div>
   <h2>Seu negócio merece<br/><span class="shimmer-text">controle de verdade</span></h2>
@@ -414,11 +523,11 @@
     <span class="logo-text">SV Finance</span>
   </a>
   <div class="footer-links">
+    <a href="#segmentos">Segmentos</a>
     <a href="#funcionalidades">Funcionalidades</a>
     <a href="#planos">Planos</a>
-    <a href="#para-quem">Para quem</a>
-    <a href="#blog">Blog</a>
-    <a href="#newsletter">Newsletter</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#newsletter">Lista de espera</a>
     <a href="https://app.svfinance.com.br">Acessar sistema</a>
   </div>
   <p>© 2026 SV Finance. Todos os direitos reservados.</p>
