@@ -14,6 +14,34 @@ function closeMobileMenu() { mobileMenu?.classList.remove('open'); mobileOverlay
 mobileBtn?.addEventListener('click', openMobileMenu)
 mobileClose?.addEventListener('click', closeMobileMenu)
 
+// ── NAV SCROLL ──────────────────────────────────────────────
+const mainNav = document.getElementById('main-nav')
+window.addEventListener('scroll', () => {
+  mainNav?.classList.toggle('scrolled', window.scrollY > 40)
+}, { passive: true })
+
+// ── TOGGLE PLANOS MENSAL/ANUAL ───────────────────────────────
+let isAnnual = false
+
+function togglePlans() {
+  isAnnual = !isAnnual
+  const toggle = document.getElementById('plan-toggle')
+  const lblMonthly = document.getElementById('lbl-monthly')
+  const lblYearly  = document.getElementById('lbl-yearly')
+
+  toggle?.classList.toggle('annual', isAnnual)
+
+  if (lblMonthly) lblMonthly.classList.toggle('active', !isAnnual)
+  if (lblYearly)  lblYearly.classList.toggle('active',  isAnnual)
+
+  document.querySelectorAll('.plan-price-monthly').forEach(el => {
+    el.classList.toggle('show', !isAnnual)
+  })
+  document.querySelectorAll('.plan-price-yearly').forEach(el => {
+    el.classList.toggle('show', isAnnual)
+  })
+}
+
 // ── FLOATING NUMBERS (canvas na hero) ──────────────────────
 ;(function () {
   const canvas = document.createElement('canvas')
@@ -49,10 +77,10 @@ mobileClose?.addEventListener('click', closeMobileMenu)
     canvas.style.opacity = canvasOpacity
   }, { passive: true })
 
-  let animId, lastTime = 0
+  let lastTime = 0
   function animate(timestamp) {
-    if (canvasOpacity <= 0) { ctx.clearRect(0, 0, canvas.width, canvas.height); animId = requestAnimationFrame(animate); return }
-    if (timestamp - lastTime < 34) { animId = requestAnimationFrame(animate); return }
+    if (canvasOpacity <= 0) { ctx.clearRect(0, 0, canvas.width, canvas.height); requestAnimationFrame(animate); return }
+    if (timestamp - lastTime < 34) { requestAnimationFrame(animate); return }
     lastTime = timestamp
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     particles.forEach(p => {
@@ -71,9 +99,9 @@ mobileClose?.addEventListener('click', closeMobileMenu)
       ctx.fillText(p.symbol, p.x, p.y)
     })
     ctx.globalAlpha = 1
-    animId = requestAnimationFrame(animate)
+    requestAnimationFrame(animate)
   }
-  animId = requestAnimationFrame(animate)
+  requestAnimationFrame(animate)
 })()
 
 // ── FALLBACK IMAGENS MOCKUP ─────────────────────────────────
@@ -91,13 +119,17 @@ mobileClose?.addEventListener('click', closeMobileMenu)
   checkImg('iphone-preview', 'iphone-placeholder')
 })()
 
-// ── SCROLL REVEAL ───────────────────────────────────────────
+// ── SCROLL REVEAL (suporta reveal, reveal-left, reveal-right) ──
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+    if (e.isIntersecting) {
+      e.target.classList.add('visible')
+      revealObs.unobserve(e.target)
+    }
   })
 }, { threshold: 0.08 })
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el))
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObs.observe(el))
 
 // ── NAV HIGHLIGHT ───────────────────────────────────────────
 const navSections = document.querySelectorAll('[id]')
@@ -117,8 +149,6 @@ if (form) {
     e.preventDefault()
     const name  = document.getElementById('nl-name')?.value  || ''
     const email = document.getElementById('nl-email')?.value || ''
-
-    // Tenta enviar para o backend
     try {
       await fetch('https://api.svfinance.com.br/api/newsletter', {
         method: 'POST',
@@ -126,11 +156,28 @@ if (form) {
         body: JSON.stringify({ name, email }),
       })
     } catch (err) {
-      // Falha silenciosa — mostra sucesso mesmo assim
       console.log('Newsletter:', name, email)
     }
-
     form.style.display = 'none'
     document.getElementById('nl-success').style.display = 'block'
   })
 }
+
+// ── PARALLAX SUAVE NOS CARDS DE PLANO ───────────────────────
+;(function () {
+  const cards = document.querySelectorAll('.glass-card')
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect()
+      const x = (e.clientX - rect.left) / rect.width  - 0.5
+      const y = (e.clientY - rect.top)  / rect.height - 0.5
+      card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg) translateY(-8px)`
+    })
+    card.addEventListener('mouseleave', () => {
+      // Respeita classe featured
+      const isFeatured = card.classList.contains('featured')
+      card.style.transform = isFeatured ? 'scale(1.03)' : ''
+      card.style.transition = 'transform 0.5s cubic-bezier(0.22,1,0.36,1)'
+    })
+  })
+})()
