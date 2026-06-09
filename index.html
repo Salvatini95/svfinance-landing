@@ -57,32 +57,22 @@
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
-
   <div class="hero-content">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
       ✦ Sem cartão de crédito · Comece grátis hoje
     </div>
-
-    <h1>
-      O ERP que seu negócio<br/>
-      precisava para <span class="shimmer-text">crescer de verdade</span>
-    </h1>
-
-    <p>Vendas, estoque, NF-e e financeiro integrados.<br/>
-    Mais simples que qualquer outro ERP.</p>
-
+    <h1>O ERP que seu negócio<br/>precisava para <span class="shimmer-text">crescer de verdade</span></h1>
+    <p>Vendas, estoque, NF-e e financeiro integrados.<br/>Mais simples que qualquer outro ERP.</p>
     <div class="hero-ctas">
       <a href="https://app.svfinance.com.br" class="btn btn-primary btn-hero">Criar conta gratuita →</a>
       <a href="#funcionalidades" class="btn btn-ghost">Ver funcionalidades</a>
     </div>
-
     <div class="hero-proof">
       <span>✓ 7 dias grátis com acesso completo</span>
       <span>✓ Sem cartão no cadastro</span>
       <span>✓ Cancele quando quiser</span>
     </div>
-
     <div class="hero-stats">
       <div class="hero-stat">
         <span class="hero-stat-num"><span class="count" style="--to:12;--dur:1.5s">12</span>+</span>
@@ -104,7 +94,7 @@
   </div>
 </div>
 
-<!-- MOCKUP -->
+<!-- MOCKUP — dashboard SVG inline (substitua por img/dashboard-preview.png quando tiver o print real) -->
 <div class="mockup-section reveal">
   <div class="mockup-label">Veja o sistema em ação</div>
   <div class="mockup-wrap">
@@ -117,9 +107,148 @@
           <span class="mac-url">app.svfinance.com.br</span>
         </div>
         <div class="mac-screen">
-          <img src="img/dashboard-preview.png" alt="SV Finance Dashboard" class="mac-img" id="mac-preview"/>
-          <div class="mac-placeholder" id="mac-placeholder">
-            <div class="placeholder-inner"><span style="font-size:2.5rem">📊</span><p>Dashboard Analytics</p><small>img/dashboard-preview.png</small></div>
+          <!-- ══ SUBSTITUA PELO SEU PRINT REAL ══
+               Quando tiver o print do dashboard, apague o <div class="dashboard-svg-wrap">...</div>
+               e coloque: <img src="img/dashboard-preview.png" alt="Dashboard" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+          -->
+          <div class="dashboard-svg-wrap">
+            <svg viewBox="0 0 680 425" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+              <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d1424"/><stop offset="100%" stop-color="#080c14"/></linearGradient>
+                <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4f8ef7"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+                <linearGradient id="green" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#06d6a0"/><stop offset="100%" stop-color="#0a9e77"/></linearGradient>
+                <linearGradient id="chart1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4f8ef7" stop-opacity="0.6"/><stop offset="100%" stop-color="#4f8ef7" stop-opacity="0.02"/></linearGradient>
+                <linearGradient id="chart2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#06d6a0" stop-opacity="0.5"/><stop offset="100%" stop-color="#06d6a0" stop-opacity="0.02"/></linearGradient>
+                <clipPath id="clip-chart"><rect x="0" y="0" width="300" height="120"/></clipPath>
+              </defs>
+              <!-- BG -->
+              <rect width="680" height="425" fill="url(#bg)"/>
+              <!-- Grid linhas sutis -->
+              <line x1="0" y1="60" x2="680" y2="60" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+              <line x1="160" y1="0" x2="160" y2="425" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+              <!-- SIDEBAR -->
+              <rect width="52" height="425" fill="rgba(255,255,255,0.03)"/>
+              <rect x="10" y="14" width="32" height="32" rx="8" fill="url(#blue)" opacity="0.9"/>
+              <text x="26" y="34" text-anchor="middle" font-size="14" fill="white">S</text>
+              <!-- ícones sidebar -->
+              <rect x="14" y="60" width="24" height="24" rx="6" fill="rgba(79,142,247,0.2)"/>
+              <rect x="14" y="94" width="24" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+              <rect x="14" y="128" width="24" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+              <rect x="14" y="162" width="24" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+              <rect x="14" y="196" width="24" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+              <rect x="14" y="230" width="24" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+
+              <!-- TOPBAR -->
+              <rect x="52" y="0" width="628" height="48" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+              <text x="68" y="29" font-size="12" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-weight="600">Dashboard</text>
+              <rect x="540" y="12" width="120" height="24" rx="6" fill="url(#blue)" opacity="0.85"/>
+              <text x="600" y="28" text-anchor="middle" font-size="10" fill="white" font-family="sans-serif" font-weight="600">Nova transação</text>
+              <!-- avatar -->
+              <circle cx="634" cy="24" r="14" fill="url(#blue)" opacity="0.7"/>
+              <text x="634" y="28" text-anchor="middle" font-size="10" fill="white" font-family="sans-serif">G</text>
+
+              <!-- KPI CARDS -->
+              <!-- Card 1 — Receita -->
+              <rect x="68" y="60" width="138" height="72" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+              <text x="82" y="80" font-size="9" fill="rgba(255,255,255,0.45)" font-family="sans-serif">RECEITA DO MÊS</text>
+              <text x="82" y="100" font-size="16" fill="white" font-family="sans-serif" font-weight="700">R$ 18.420</text>
+              <rect x="82" y="112" width="40" height="10" rx="3" fill="rgba(6,214,160,0.2)"/>
+              <text x="102" y="121" text-anchor="middle" font-size="7" fill="#06d6a0" font-family="sans-serif" font-weight="600">▲ +12,4%</text>
+
+              <!-- Card 2 — Despesas -->
+              <rect x="214" y="60" width="138" height="72" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+              <text x="228" y="80" font-size="9" fill="rgba(255,255,255,0.45)" font-family="sans-serif">DESPESAS</text>
+              <text x="228" y="100" font-size="16" fill="white" font-family="sans-serif" font-weight="700">R$ 6.830</text>
+              <rect x="228" y="112" width="40" height="10" rx="3" fill="rgba(239,68,68,0.18)"/>
+              <text x="248" y="121" text-anchor="middle" font-size="7" fill="#f87171" font-family="sans-serif" font-weight="600">▲ +3,1%</text>
+
+              <!-- Card 3 — Lucro -->
+              <rect x="360" y="60" width="138" height="72" rx="10" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.2)" stroke-width="0.5"/>
+              <text x="374" y="80" font-size="9" fill="rgba(255,255,255,0.45)" font-family="sans-serif">LUCRO LÍQUIDO</text>
+              <text x="374" y="100" font-size="16" fill="#4f8ef7" font-family="sans-serif" font-weight="700">R$ 11.590</text>
+              <rect x="374" y="112" width="40" height="10" rx="3" fill="rgba(6,214,160,0.2)"/>
+              <text x="394" y="121" text-anchor="middle" font-size="7" fill="#06d6a0" font-family="sans-serif" font-weight="600">▲ +18,7%</text>
+
+              <!-- Card 4 — Vendas -->
+              <rect x="506" y="60" width="138" height="72" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+              <text x="520" y="80" font-size="9" fill="rgba(255,255,255,0.45)" font-family="sans-serif">VENDAS</text>
+              <text x="520" y="100" font-size="16" fill="white" font-family="sans-serif" font-weight="700">147 pedidos</text>
+              <rect x="520" y="112" width="40" height="10" rx="3" fill="rgba(6,214,160,0.2)"/>
+              <text x="540" y="121" text-anchor="middle" font-size="7" fill="#06d6a0" font-family="sans-serif" font-weight="600">▲ +9 hoje</text>
+
+              <!-- GRÁFICO PRINCIPAL — Fluxo de Caixa -->
+              <rect x="68" y="144" width="380" height="150" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+              <text x="84" y="163" font-size="10" fill="rgba(255,255,255,0.8)" font-family="sans-serif" font-weight="600">Fluxo de Caixa — Junho 2026</text>
+              <!-- linhas de grid do gráfico -->
+              <line x1="84" y1="178" x2="432" y2="178" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <line x1="84" y1="198" x2="432" y2="198" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <line x1="84" y1="218" x2="432" y2="218" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <line x1="84" y1="238" x2="432" y2="238" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <line x1="84" y1="258" x2="432" y2="258" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+              <!-- área receita -->
+              <path d="M84,248 L130,232 L176,220 L222,210 L268,195 L314,185 L360,178 L406,172 L432,170 L432,278 L84,278 Z" fill="url(#chart1)"/>
+              <path d="M84,248 L130,232 L176,220 L222,210 L268,195 L314,185 L360,178 L406,172 L432,170" fill="none" stroke="#4f8ef7" stroke-width="2" stroke-linecap="round"/>
+              <!-- área despesa -->
+              <path d="M84,268 L130,262 L176,258 L222,252 L268,248 L314,244 L360,240 L406,238 L432,236 L432,278 L84,278 Z" fill="url(#chart2)"/>
+              <path d="M84,268 L130,262 L176,258 L222,252 L268,248 L314,244 L360,240 L406,238 L432,236" fill="none" stroke="#06d6a0" stroke-width="2" stroke-linecap="round"/>
+              <!-- legenda -->
+              <circle cx="94" cy="286" r="4" fill="#4f8ef7"/>
+              <text x="102" y="289" font-size="8" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Receita</text>
+              <circle cx="148" cy="286" r="4" fill="#06d6a0"/>
+              <text x="156" y="289" font-size="8" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Despesa</text>
+              <!-- eixo X -->
+              <text x="84"  y="278" font-size="7" fill="rgba(255,255,255,0.25)" font-family="sans-serif">Jan</text>
+              <text x="122" y="278" font-size="7" fill="rgba(255,255,255,0.25)" font-family="sans-serif">Fev</text>
+              <text x="168" y="278" font-size="7" fill="rgba(255,255,255,0.25)" font-family="sans-serif">Mar</text>
+              <text x="214" y="278" font-size="7" fill="rgba(255,255,255,0.25)" font-family="sans-serif">Abr</text>
+              <text x="260" y="278" font-size="7" fill="rgba(255,255,255,0.25)" font-family="sans-serif">Mai</text>
+              <text x="308" y="278" font-size="7" fill="rgba(255,255,255,0.25)" font-family="sans-serif">Jun</text>
+
+              <!-- CARD LATERAL — Contas a Receber -->
+              <rect x="460" y="144" width="184" height="150" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+              <text x="476" y="163" font-size="10" fill="rgba(255,255,255,0.8)" font-family="sans-serif" font-weight="600">Contas a Receber</text>
+              <!-- itens -->
+              <rect x="476" y="170" width="152" height="22" rx="6" fill="rgba(255,255,255,0.04)"/>
+              <text x="484" y="184" font-size="9" fill="rgba(255,255,255,0.7)" font-family="sans-serif">Loja Estrela</text>
+              <text x="612" y="184" text-anchor="end" font-size="9" fill="#06d6a0" font-family="sans-serif" font-weight="600">R$1.200</text>
+
+              <rect x="476" y="196" width="152" height="22" rx="6" fill="rgba(255,255,255,0.04)"/>
+              <text x="484" y="210" font-size="9" fill="rgba(255,255,255,0.7)" font-family="sans-serif">Barbearia Top</text>
+              <text x="612" y="210" text-anchor="end" font-size="9" fill="#06d6a0" font-family="sans-serif" font-weight="600">R$850</text>
+
+              <rect x="476" y="222" width="152" height="22" rx="6" fill="rgba(255,255,255,0.04)"/>
+              <text x="484" y="236" font-size="9" fill="rgba(255,255,255,0.7)" font-family="sans-serif">Restaurante Sol</text>
+              <text x="612" y="236" text-anchor="end" font-size="9" fill="#f87171" font-family="sans-serif" font-weight="600">R$3.400</text>
+
+              <rect x="476" y="248" width="152" height="22" rx="6" fill="rgba(255,255,255,0.04)"/>
+              <text x="484" y="262" font-size="9" fill="rgba(255,255,255,0.7)" font-family="sans-serif">Studio Beleza</text>
+              <text x="612" y="262" text-anchor="end" font-size="9" fill="#06d6a0" font-family="sans-serif" font-weight="600">R$680</text>
+
+              <!-- LINHA BOTTOM — Transações Recentes -->
+              <rect x="68" y="306" width="574" height="104" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
+              <text x="84" y="324" font-size="10" fill="rgba(255,255,255,0.8)" font-family="sans-serif" font-weight="600">Transações Recentes</text>
+              <!-- header tabela -->
+              <text x="84"  y="340" font-size="8" fill="rgba(255,255,255,0.3)" font-family="sans-serif">DESCRIÇÃO</text>
+              <text x="360" y="340" font-size="8" fill="rgba(255,255,255,0.3)" font-family="sans-serif">DATA</text>
+              <text x="560" y="340" text-anchor="end" font-size="8" fill="rgba(255,255,255,0.3)" font-family="sans-serif">VALOR</text>
+              <line x1="84" y1="344" x2="628" y2="344" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+              <!-- row 1 -->
+              <circle cx="92" cy="358" r="6" fill="rgba(6,214,160,0.2)"/>
+              <text x="106" y="362" font-size="9" fill="rgba(255,255,255,0.75)" font-family="sans-serif">Venda #PED-0147 — Loja Estrela</text>
+              <text x="360" y="362" font-size="9" fill="rgba(255,255,255,0.4)" font-family="sans-serif">08/06/2026</text>
+              <text x="560" y="362" text-anchor="end" font-size="9" fill="#06d6a0" font-family="sans-serif" font-weight="600">+ R$1.200,00</text>
+              <!-- row 2 -->
+              <circle cx="92" cy="378" r="6" fill="rgba(239,68,68,0.2)"/>
+              <text x="106" y="382" font-size="9" fill="rgba(255,255,255,0.75)" font-family="sans-serif">Aluguel — Junho 2026</text>
+              <text x="360" y="382" font-size="9" fill="rgba(255,255,255,0.4)" font-family="sans-serif">07/06/2026</text>
+              <text x="560" y="382" text-anchor="end" font-size="9" fill="#f87171" font-family="sans-serif" font-weight="600">- R$2.500,00</text>
+              <!-- row 3 -->
+              <circle cx="92" cy="398" r="6" fill="rgba(6,214,160,0.2)"/>
+              <text x="106" y="402" font-size="9" fill="rgba(255,255,255,0.75)" font-family="sans-serif">OS-0089 — Barbearia Top</text>
+              <text x="360" y="402" font-size="9" fill="rgba(255,255,255,0.4)" font-family="sans-serif">07/06/2026</text>
+              <text x="560" y="402" text-anchor="end" font-size="9" fill="#06d6a0" font-family="sans-serif" font-weight="600">+ R$850,00</text>
+            </svg>
           </div>
         </div>
       </div>
@@ -156,31 +285,17 @@
         <div class="segment-icon">👗</div>
         <h3>Lojas de Roupa & Streetwear</h3>
         <p>Controle de grade (tamanho × cor), PDV, etiquetas com código de barras, troca/devolução e coleções por temporada.</p>
-        <div class="segment-chips">
-          <span>Grade P/M/G/GG</span><span>PDV</span><span>Estoque por cor</span><span>Coleções</span>
-        </div>
+        <div class="segment-chips"><span>Grade P/M/G/GG</span><span>PDV</span><span>Estoque por cor</span><span>Coleções</span></div>
         <a href="https://app.svfinance.com.br" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center">Começar grátis →</a>
       </div>
     </div>
     <div class="segment-small-grid">
-      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-barbeiro.jpg') center/cover">
-        <div class="segment-icon-sm">✂️</div><h4>Barbeiro & Salão</h4><p>Caixa, comissões e clientes recorrentes.</p>
-      </div>
-      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-restaurante.jpg') center/cover">
-        <div class="segment-icon-sm">🍔</div><h4>Restaurante & Food</h4><p>Estoque, vendas e DRE para o food service.</p>
-      </div>
-      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-estetica.jpg') center/cover">
-        <div class="segment-icon-sm">💅</div><h4>Estética & Beleza</h4><p>Serviços, agenda e fluxo de caixa simplificado.</p>
-      </div>
-      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-contador.jpg') center/cover">
-        <div class="segment-icon-sm">🧮</div><h4>Contador</h4><p>Multi-empresa, relatórios e importação de dados.</p>
-      </div>
-      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-mototaxi.jpg') center/cover">
-        <div class="segment-icon-sm">🛵</div><h4>Mototaxi & Transporte</h4><p>Corridas, entradas diárias e controle de custos.</p>
-      </div>
-      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95))">
-        <div class="segment-icon-sm">⚡</div><h4>Outros negócios</h4><p>Sistema genérico para qualquer empreendimento.</p>
-      </div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-barbeiro.jpg') center/cover"><div class="segment-icon-sm">✂️</div><h4>Barbeiro & Salão</h4><p>Caixa, comissões e clientes recorrentes.</p></div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-restaurante.jpg') center/cover"><div class="segment-icon-sm">🍔</div><h4>Restaurante & Food</h4><p>Estoque, vendas e DRE para o food service.</p></div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-estetica.jpg') center/cover"><div class="segment-icon-sm">💅</div><h4>Estética & Beleza</h4><p>Serviços, agenda e fluxo de caixa simplificado.</p></div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-contador.jpg') center/cover"><div class="segment-icon-sm">🧮</div><h4>Contador</h4><p>Multi-empresa, relatórios e importação de dados.</p></div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95)),url('img/seg-mototaxi.jpg') center/cover"><div class="segment-icon-sm">🛵</div><h4>Mototaxi & Transporte</h4><p>Corridas, entradas diárias e controle de custos.</p></div>
+      <div class="segment-card segment-small" style="background:linear-gradient(160deg,rgba(8,12,20,0.95),rgba(15,20,40,0.95))"><div class="segment-icon-sm">⚡</div><h4>Outros negócios</h4><p>Sistema genérico para qualquer empreendimento.</p></div>
     </div>
   </div>
 </div>
@@ -248,7 +363,7 @@
       <div class="compare-cell compare-highlight">SV Finance</div>
     </div>
     <div class="compare-row"><div class="compare-cell compare-feature-col">Plano gratuito</div><div class="compare-cell compare-no">✗</div><div class="compare-cell compare-no">✗</div><div class="compare-cell compare-yes compare-highlight">✓</div></div>
-    <div class="compare-row"><div class="compare-cell compare-feature-col">Preço mensal</div><div class="compare-cell compare-no" style="color:var(--muted)">R$89+/mês</div><div class="compare-cell compare-no" style="color:var(--muted)">R$99+/mês</div><div class="compare-cell compare-yes compare-highlight">R$49/mês</div></div>
+    <div class="compare-row"><div class="compare-cell compare-feature-col">Preço mensal</div><div class="compare-cell" style="color:var(--muted)">R$89+/mês</div><div class="compare-cell" style="color:var(--muted)">R$99+/mês</div><div class="compare-cell compare-yes compare-highlight">R$49/mês</div></div>
     <div class="compare-row"><div class="compare-cell compare-feature-col">NF-e de produto</div><div class="compare-cell compare-yes">✓</div><div class="compare-cell compare-yes">✓</div><div class="compare-cell compare-yes compare-highlight">✓</div></div>
     <div class="compare-row"><div class="compare-cell compare-feature-col">Vendas e estoque</div><div class="compare-cell compare-yes">✓</div><div class="compare-cell compare-yes">✓</div><div class="compare-cell compare-yes compare-highlight">✓</div></div>
     <div class="compare-row"><div class="compare-cell compare-feature-col">Comissões por vendedor</div><div class="compare-cell compare-yes">✓</div><div class="compare-cell compare-partial">Parcial</div><div class="compare-cell compare-yes compare-highlight">✓</div></div>
@@ -266,8 +381,6 @@
     <h2>Preço de quem acreditou primeiro</h2>
     <p class="section-sub" style="margin:0 auto">Quem assinar agora trava esse preço para sempre. Quando subirmos, você não sente.</p>
   </div>
-
-  <!-- Toggle mensal/anual -->
   <div class="plan-toggle-wrap reveal">
     <span class="plan-toggle-label active" id="lbl-monthly">Mensal</span>
     <div class="plan-toggle" id="plan-toggle" onclick="togglePlans()">
@@ -276,21 +389,13 @@
     <span class="plan-toggle-label" id="lbl-yearly">Anual</span>
     <span class="plan-toggle-save">Economize até 20%</span>
   </div>
-
   <div class="plans-grid reveal">
-
     <!-- FREE -->
     <div class="glass-card">
       <div class="plan-name">Free Trial</div>
       <div class="plan-price-block">
-        <div class="plan-price-monthly show">
-          <div class="price-main"><span class="price-value free-val">7 dias</span></div>
-          <div style="font-size:12px;color:var(--muted);margin-top:6px">Grátis · Acesso completo ao Pro</div>
-        </div>
-        <div class="plan-price-yearly">
-          <div class="price-main"><span class="price-value free-val">7 dias</span></div>
-          <div style="font-size:12px;color:var(--muted);margin-top:6px">Grátis · Acesso completo ao Pro</div>
-        </div>
+        <div class="plan-price-monthly show"><div class="price-main"><span class="price-value free-val">7 dias</span></div><div style="font-size:12px;color:var(--muted);margin-top:6px">Grátis · Acesso completo ao Pro</div></div>
+        <div class="plan-price-yearly"><div class="price-main"><span class="price-value free-val">7 dias</span></div><div style="font-size:12px;color:var(--muted);margin-top:6px">Grátis · Acesso completo ao Pro</div></div>
       </div>
       <div class="plan-desc">Para experimentar sem compromisso</div>
       <ul class="plan-features">
@@ -302,27 +407,13 @@
       </ul>
       <a href="https://app.svfinance.com.br" class="btn btn-ghost">Começar grátis →</a>
     </div>
-
     <!-- PRO -->
     <div class="glass-card featured">
       <div class="plan-badge">⭐ Mais popular</div>
       <div class="plan-name">Pro Fundador</div>
       <div class="plan-price-block">
-        <div class="plan-price-monthly show">
-          <div class="price-main">
-            <span class="price-currency">R$</span>
-            <span class="price-value pro-val">49</span>
-            <span class="price-period">/mês</span>
-          </div>
-        </div>
-        <div class="plan-price-yearly">
-          <div class="price-main">
-            <span class="price-currency">R$</span>
-            <span class="price-value pro-val">39</span>
-            <span class="price-period">/mês</span>
-          </div>
-          <div style="font-size:12px;color:var(--accent);margin-top:4px">R$468/ano · 2 meses grátis</div>
-        </div>
+        <div class="plan-price-monthly show"><div class="price-main"><span class="price-currency">R$</span><span class="price-value pro-val">49</span><span class="price-period">/mês</span></div></div>
+        <div class="plan-price-yearly"><div class="price-main"><span class="price-currency">R$</span><span class="price-value pro-val">39</span><span class="price-period">/mês</span></div><div style="font-size:12px;color:var(--accent);margin-top:4px">R$468/ano · 2 meses grátis</div></div>
       </div>
       <div class="plan-founder-tag">🔒 Preço travado para sempre</div>
       <div class="plan-founder-note">Você entra agora por R$49. Quando o preço subir para R$79, você não paga a diferença.</div>
@@ -339,26 +430,12 @@
       </ul>
       <a href="https://app.svfinance.com.br" class="btn btn-primary">Garantir preço de fundador →</a>
     </div>
-
     <!-- BUSINESS -->
     <div class="glass-card">
       <div class="plan-name">Business Fundador</div>
       <div class="plan-price-block">
-        <div class="plan-price-monthly show">
-          <div class="price-main">
-            <span class="price-currency">R$</span>
-            <span class="price-value biz-val">99</span>
-            <span class="price-period">/mês</span>
-          </div>
-        </div>
-        <div class="plan-price-yearly">
-          <div class="price-main">
-            <span class="price-currency">R$</span>
-            <span class="price-value biz-val">79</span>
-            <span class="price-period">/mês</span>
-          </div>
-          <div style="font-size:12px;color:var(--accent);margin-top:4px">R$948/ano · 2 meses grátis</div>
-        </div>
+        <div class="plan-price-monthly show"><div class="price-main"><span class="price-currency">R$</span><span class="price-value biz-val">99</span><span class="price-period">/mês</span></div></div>
+        <div class="plan-price-yearly"><div class="price-main"><span class="price-currency">R$</span><span class="price-value biz-val">79</span><span class="price-period">/mês</span></div><div style="font-size:12px;color:var(--accent);margin-top:4px">R$948/ano · 2 meses grátis</div></div>
       </div>
       <div class="plan-founder-tag">🔒 Preço travado para sempre</div>
       <div class="plan-founder-note">Para contadores e quem gerencia mais de um CNPJ. Preço sobe para R$149 na fase 2.</div>
@@ -373,10 +450,7 @@
       </ul>
       <a href="https://app.svfinance.com.br" class="btn btn-ghost">Garantir preço de fundador →</a>
     </div>
-
   </div>
-
-  <!-- Nota de urgência -->
   <div class="plan-urgency reveal">
     <strong>Oferta de Fundador</strong> — Estes são os preços do lançamento. <span>A partir de 50 clientes pagantes</span>, o Pro passa para R$79/mês e o Business para R$149/mês.<br/>
     Quem assinar agora <strong>trava o preço para sempre</strong>, independente de quantas vezes reajustarmos.
@@ -386,16 +460,18 @@
 <!-- FUNDADORES -->
 <div class="founders-section" id="fundadores">
   <div class="founders-layout">
-
     <div class="founders-text reveal-left">
       <div class="section-tag">Os fundadores</div>
       <h2>Construído por quem<br/>vive o problema</h2>
       <p>A SV Finance nasceu da dificuldade real de gerenciar um negócio sem ferramentas acessíveis. Somos Guilherme e Jackeline — um desenvolvedor e uma estrategista de marca — construindo isso em público, do zero, para você.</p>
-
       <div class="founders-faces">
         <div class="founder-face">
           <div class="founder-avatar">
-            <img src="img/guilherme.jpg" alt="Guilherme" onerror="this.parentElement.textContent='G'"/>
+            <!--
+              SUBSTITUA PELA SUA FOTO:
+              Salve como img/guilherme.jpg (qualquer tamanho, vai recortar em círculo)
+            -->
+            <img src="img/guilherme.jpg" alt="Guilherme" onerror="this.style.display='none';this.parentElement.innerHTML='G'"/>
           </div>
           <div class="founder-info">
             <div class="founder-name">Guilherme Salvatini</div>
@@ -404,7 +480,11 @@
         </div>
         <div class="founder-face">
           <div class="founder-avatar" style="background:linear-gradient(135deg,#e6683c,#cc2366)">
-            <img src="img/jackeline.jpg" alt="Jackeline" onerror="this.parentElement.textContent='J'"/>
+            <!--
+              SUBSTITUA PELA FOTO DA JACKELINE:
+              Salve como img/jackeline.jpg
+            -->
+            <img src="img/jackeline.jpg" alt="Jackeline" onerror="this.style.display='none';this.parentElement.innerHTML='J'"/>
           </div>
           <div class="founder-info">
             <div class="founder-name">Jackeline Afonso</div>
@@ -412,115 +492,138 @@
           </div>
         </div>
       </div>
-
       <div class="founders-social">
-        <a href="https://instagram.com/svfinance" target="_blank" class="social-pill ig">
+        <a href="https://www.instagram.com/svfinance_" target="_blank" class="social-pill ig">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          @svfinance
+          @svfinance_
         </a>
-        <a href="https://tiktok.com/@svfinance" target="_blank" class="social-pill tt">
+        <a href="https://www.tiktok.com/@svfinance_" target="_blank" class="social-pill tt">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.26 8.26 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          @svfinance
+          @svfinance_
         </a>
       </div>
     </div>
 
     <div class="instagram-feed reveal-right">
-      <div class="instagram-feed-label">
-        Acompanhe nossa jornada
-      </div>
+      <div class="instagram-feed-label">Acompanhe nossa jornada</div>
       <div class="ig-track-wrap">
         <div class="ig-track" id="ig-track">
-          <!-- Posts reais — substituir src pelas imagens reais do Instagram -->
-          <div class="ig-post">
-            <div class="ig-post-placeholder">
+          <!--
+          ══════════════════════════════════════════════════════
+          COMO SUBSTITUIR AS FOTOS DOS POSTS:
+
+          1. Abra cada link do Instagram abaixo no celular
+          2. Pause o vídeo no primeiro frame (print ou use a miniatura)
+          3. Recorte a imagem em formato quadrado
+          4. Salve na pasta img/ com os nomes: post-1.jpg até post-6.jpg
+          5. Substitua o <div class="ig-post-placeholder">...</div>
+             pelo seguinte código:
+             <img src="img/post-X.jpg" alt="Post Instagram">
+
+          Links dos posts (na ordem dos cards abaixo):
+          post-1.jpg → https://www.instagram.com/p/DZNhKAnzkRq/
+          post-2.jpg → https://www.instagram.com/p/DZIMOirxNgF/
+          post-3.jpg → https://www.instagram.com/p/DZFnbUdlhZf/
+          post-4.jpg → https://www.instagram.com/p/DY966sSz7xm/
+          post-5.jpg → https://www.instagram.com/p/DYzr1folkAg/
+          post-6.jpg → https://www.instagram.com/p/DYmtSa6RM35/
+          ══════════════════════════════════════════════════════
+          -->
+
+          <!-- POST 1 -->
+          <a class="ig-post" href="https://www.instagram.com/p/DZNhKAnzkRq/" target="_blank" rel="noopener">
+            <!-- SUBSTITUA O BLOCO ABAIXO POR: <img src="img/post-1.jpg" alt="Post 1"> -->
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(79,142,247,0.2),rgba(13,20,36,0.95))">
               <span class="ig-icon">📱</span>
-              <span class="ig-caption">Adicione suas fotos do Instagram aqui</span>
+              <span class="ig-caption">Final de semana chegando... seu financeiro está em dia?</span>
             </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Build in public</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(79,142,247,0.15),rgba(124,58,237,0.1))">
-              <span class="ig-icon">🚀</span>
-              <span class="ig-caption">Nos bastidores do SV Finance</span>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+
+          <!-- POST 2 -->
+          <a class="ig-post" href="https://www.instagram.com/p/DZIMOirxNgF/" target="_blank" rel="noopener">
+            <!-- SUBSTITUA O BLOCO ABAIXO POR: <img src="img/post-2.jpg" alt="Post 2"> -->
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(30,20,40,0.98),rgba(79,142,247,0.15))">
+              <span class="ig-icon">🎥</span>
+              <span class="ig-caption">Cadê? No SV Finance.</span>
             </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Nos bastidores</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(6,214,160,0.15),rgba(79,142,247,0.1))">
-              <span class="ig-icon">💡</span>
-              <span class="ig-caption">Dicas de gestão financeira</span>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+
+          <!-- POST 3 -->
+          <a class="ig-post" href="https://www.instagram.com/p/DZFnbUdlhZf/" target="_blank" rel="noopener">
+            <!-- SUBSTITUA O BLOCO ABAIXO POR: <img src="img/post-3.jpg" alt="Post 3"> -->
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(6,214,160,0.15),rgba(13,20,36,0.95))">
+              <span class="ig-icon">🏆</span>
+              <span class="ig-caption">Junho chegou. A Copa também. Seu negócio está preparado?</span>
             </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Dicas financeiras</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(79,142,247,0.08))">
-              <span class="ig-icon">📊</span>
-              <span class="ig-caption">Demo do sistema ao vivo</span>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+
+          <!-- POST 4 -->
+          <a class="ig-post" href="https://www.instagram.com/p/DY966sSz7xm/" target="_blank" rel="noopener">
+            <!-- SUBSTITUA O BLOCO ABAIXO POR: <img src="img/post-4.jpg" alt="Post 4"> -->
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(30,20,40,0.98),rgba(6,214,160,0.12))">
+              <span class="ig-icon">🎥</span>
+              <span class="ig-caption">Gratuito. Sem cartão. Sem pegadinha.</span>
             </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Demo ao vivo</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(225,48,108,0.15),rgba(79,142,247,0.08))">
-              <span class="ig-icon">🎯</span>
-              <span class="ig-caption">MEI, esse sistema é pra você</span>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+
+          <!-- POST 5 -->
+          <a class="ig-post" href="https://www.instagram.com/p/DYzr1folkAg/" target="_blank" rel="noopener">
+            <!-- SUBSTITUA O BLOCO ABAIXO POR: <img src="img/post-5.jpg" alt="Post 5"> -->
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(13,20,36,0.95))">
+              <span class="ig-icon">💼</span>
+              <span class="ig-caption">Tudo que seu negócio precisa para vender, controlar e crescer.</span>
             </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Para MEIs</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(8,12,20,0.8))">
-              <span class="ig-icon">✨</span>
-              <span class="ig-caption">Novo módulo lançado</span>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+
+          <!-- POST 6 -->
+          <a class="ig-post" href="https://www.instagram.com/p/DYmtSa6RM35/" target="_blank" rel="noopener">
+            <!-- SUBSTITUA O BLOCO ABAIXO POR: <img src="img/post-6.jpg" alt="Post 6"> -->
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(212,175,55,0.18),rgba(13,20,36,0.95))">
+              <span class="ig-icon">🎥</span>
+              <span class="ig-caption">Nos bastidores da SV Finance.</span>
             </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Novo módulo</div></div>
-          </div>
-          <!-- Duplicata para loop infinito -->
-          <div class="ig-post">
-            <div class="ig-post-placeholder">
-              <span class="ig-icon">📱</span>
-              <span class="ig-caption">Adicione suas fotos do Instagram aqui</span>
-            </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Build in public</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(79,142,247,0.15),rgba(124,58,237,0.1))">
-              <span class="ig-icon">🚀</span>
-              <span class="ig-caption">Nos bastidores do SV Finance</span>
-            </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Nos bastidores</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(6,214,160,0.15),rgba(79,142,247,0.1))">
-              <span class="ig-icon">💡</span>
-              <span class="ig-caption">Dicas de gestão financeira</span>
-            </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Dicas financeiras</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(79,142,247,0.08))">
-              <span class="ig-icon">📊</span>
-              <span class="ig-caption">Demo do sistema ao vivo</span>
-            </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Demo ao vivo</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(225,48,108,0.15),rgba(79,142,247,0.08))">
-              <span class="ig-icon">🎯</span>
-              <span class="ig-caption">MEI, esse sistema é pra você</span>
-            </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Para MEIs</div></div>
-          </div>
-          <div class="ig-post">
-            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(8,12,20,0.8))">
-              <span class="ig-icon">✨</span>
-              <span class="ig-caption">Novo módulo lançado</span>
-            </div>
-            <div class="ig-post-overlay"><div class="ig-post-text">Novo módulo</div></div>
-          </div>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+
+          <!-- Duplicatas para loop infinito do carrossel -->
+          <a class="ig-post" href="https://www.instagram.com/p/DZNhKAnzkRq/" target="_blank" rel="noopener">
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(79,142,247,0.2),rgba(13,20,36,0.95))"><span class="ig-icon">📱</span><span class="ig-caption">Final de semana chegando...</span></div>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+          <a class="ig-post" href="https://www.instagram.com/p/DZIMOirxNgF/" target="_blank" rel="noopener">
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(30,20,40,0.98),rgba(79,142,247,0.15))"><span class="ig-icon">🎥</span><span class="ig-caption">Cadê? No SV Finance.</span></div>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+          <a class="ig-post" href="https://www.instagram.com/p/DZFnbUdlhZf/" target="_blank" rel="noopener">
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(6,214,160,0.15),rgba(13,20,36,0.95))"><span class="ig-icon">🏆</span><span class="ig-caption">Junho chegou. A Copa também.</span></div>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+          <a class="ig-post" href="https://www.instagram.com/p/DY966sSz7xm/" target="_blank" rel="noopener">
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(30,20,40,0.98),rgba(6,214,160,0.12))"><span class="ig-icon">🎥</span><span class="ig-caption">Gratuito. Sem cartão.</span></div>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+          <a class="ig-post" href="https://www.instagram.com/p/DYzr1folkAg/" target="_blank" rel="noopener">
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(13,20,36,0.95))"><span class="ig-icon">💼</span><span class="ig-caption">Vender, controlar e crescer.</span></div>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
+          <a class="ig-post" href="https://www.instagram.com/p/DYmtSa6RM35/" target="_blank" rel="noopener">
+            <div class="ig-post-placeholder" style="background:linear-gradient(135deg,rgba(212,175,55,0.18),rgba(13,20,36,0.95))"><span class="ig-icon">🎥</span><span class="ig-caption">Nos bastidores.</span></div>
+            <div class="ig-post-overlay"><div class="ig-post-text">Ver no Instagram →</div></div>
+          </a>
         </div>
       </div>
+      <div style="text-align:center;margin-top:16px">
+        <a href="https://www.instagram.com/svfinance_" target="_blank" class="social-pill ig" style="display:inline-flex">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Ver perfil completo @svfinance_
+        </a>
+      </div>
     </div>
-
   </div>
 </div>
 
@@ -565,18 +668,13 @@
   <div class="section-tag">Comece hoje</div>
   <h2>Seu negócio merece<br/><span class="shimmer-text">controle de verdade</span></h2>
   <p>Crie sua conta em 30 segundos. Sem cartão. Sem burocracia.</p>
-  <a href="https://app.svfinance.com.br" class="btn btn-primary" style="padding:16px 44px;font-size:15px;">
-    Criar conta gratuita →
-  </a>
+  <a href="https://app.svfinance.com.br" class="btn btn-primary" style="padding:16px 44px;font-size:15px;">Criar conta gratuita →</a>
   <p style="margin-top:14px;font-size:13px;color:var(--muted)">7 dias grátis · Sem cartão · Cancele quando quiser</p>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <a href="#" class="logo" style="font-size:1.1rem">
-    <img src="img/logo.png" alt="SV Finance" class="logo-img"/>
-    <span class="logo-text">SV Finance</span>
-  </a>
+  <a href="#" class="logo"><img src="img/logo.png" alt="SV Finance" class="logo-img"/><span class="logo-text">SV Finance</span></a>
   <div class="footer-links">
     <a href="#segmentos">Segmentos</a>
     <a href="#funcionalidades">Funcionalidades</a>

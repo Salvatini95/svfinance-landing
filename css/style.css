@@ -466,6 +466,21 @@ h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-we
 .ig-post-placeholder .ig-icon { font-size: 28px; }
 .ig-post-placeholder .ig-caption { font-size: 10px; line-height: 1.4; }
 
+/* ── DASHBOARD SVG MOCKUP ── */
+.dashboard-svg-wrap {
+  width: 100%; height: 100%;
+  background: #0d1424;
+  overflow: hidden;
+}
+
+/* ── ig-post como link (sem underline, sem cor azul) ── */
+a.ig-post {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* ── BLOG ── */
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
 .blog-card {
@@ -521,46 +536,189 @@ footer a:hover { color: var(--text); }
 @keyframes logoSpin { 0%{transform:rotateY(0deg)} 100%{transform:rotateY(360deg)} }
 @keyframes igScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
-/* ── TABLET ── */
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVIDADE COMPLETA
+   Breakpoints:
+   - 4K/ultrawide : 2560px+
+   - Large desktop: 1440px+
+   - Notebook      : 1024–1439px
+   - Tablet        : 768–1023px
+   - Mobile        : 480–767px
+   - Mobile XS     : <480px
+══════════════════════════════════════════════════════════ */
+
+/* ── 4K / ULTRAWIDE (2560px+) ── */
+@media (min-width: 2560px) {
+  :root { font-size: 20px; }
+
+  nav { padding: 18px 120px; }
+  .logo-img { width: 44px; height: 44px; }
+  .logo-text { font-size: 1.3rem; letter-spacing: 7px; }
+  .nav-links a { font-size: 16px; gap: 36px; }
+  .btn { padding: 14px 32px; font-size: 16px; border-radius: 14px; }
+
+  .hero { padding: 160px 48px 120px; }
+  h1 { font-size: 7rem; letter-spacing: -4px; }
+  .hero p { font-size: 1.5rem; max-width: 800px; }
+  .hero-badge { font-size: 15px; padding: 8px 24px; }
+  .hero-stat-num, .count::before { font-size: 2.8rem; }
+  .hero-stat-label { font-size: 13px; }
+  .hero-stat { padding: 28px 56px; }
+
+  .section-wrap, .plans-section, .founders-section {
+    max-width: 1800px;
+    padding: 140px 48px;
+  }
+  h2 { font-size: 4rem; }
+  .section-sub { font-size: 1.3rem; max-width: 700px; }
+
+  .mac-frame { width: 1000px; }
+  .mac-base  { width: 1050px; }
+  .iphone-frame { width: 260px; }
+
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+  .feature-card { padding: 48px 40px; }
+  .feature-icon { width: 64px; height: 64px; font-size: 28px; }
+  .feature-card h3 { font-size: 1.3rem; }
+  .feature-card p { font-size: 16px; }
+
+  .plans-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .glass-card { padding: 48px 36px; border-radius: 36px; }
+  .price-value { font-size: 4rem; }
+  .plan-features li { font-size: 16px; padding: 12px 0; }
+
+  .modules-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .module-chip { padding: 18px 20px; border-radius: 16px; }
+  .module-chip .name { font-size: 15px; }
+  .module-chip .icon { font-size: 22px; }
+
+  .compare-table { border-radius: 28px; }
+  .compare-cell { font-size: 16px; padding: 18px 28px; }
+
+  .founders-layout { gap: 120px; }
+  .ig-post { width: 240px; height: 240px; }
+  .founder-avatar, .founder-avatar img { width: 60px; height: 60px; }
+  .founder-name { font-size: 17px; }
+  .founder-role { font-size: 14px; }
+
+  .newsletter-card { padding: 80px 64px; border-radius: 36px; }
+  .newsletter-input { padding: 18px 24px; font-size: 16px; border-radius: 16px; }
+
+  footer { padding: 48px 120px; }
+  footer a, footer p { font-size: 15px; }
+}
+
+/* ── LARGE DESKTOP (1440–2559px) ── */
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .section-wrap, .plans-section, .founders-section { max-width: 1400px; }
+  .plans-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .features-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── NOTEBOOK / TABLET LARGO (1024–1439px) ── */
+@media (max-width: 1439px) and (min-width: 1025px) {
+  .plans-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .glass-card { padding: 28px 22px; }
+  .price-value { font-size: 2.6rem; }
+}
+
+/* ── TABLET (768–1024px) ── */
 @media (max-width: 1024px) {
   .segments-grid { grid-template-columns: 1fr; }
   .segment-featured { min-height: 380px; }
   .segment-small-grid { grid-template-columns: repeat(3, 1fr); }
   .compare-header, .compare-row { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
   .founders-layout { grid-template-columns: 1fr; gap: 48px; }
-  .plans-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .plans-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .glass-card { padding: 24px 18px; }
   .glass-card.featured { transform: none; }
   .glass-card.featured:hover { transform: translateY(-8px); }
+  .price-value { font-size: 2.4rem; }
+  .plan-features li { font-size: 13px; }
 }
 
-/* ── MOBILE ── */
+/* ── TABLET MENOR ── */
 @media (max-width: 900px) {
-  .mac-frame { width: 100%; } .mac-base { width: 100%; } .mac-wrap { width: 100%; } .iphone-wrap { display: none; } .mockup-wrap { padding: 0 16px; }
+  .mac-frame { width: 100%; }
+  .mac-base  { width: 100%; }
+  .mac-wrap  { width: 100%; }
+  .iphone-wrap { display: none; }
+  .mockup-wrap { padding: 0 16px; }
+  .plans-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+  .glass-card.featured { transform: none; }
 }
+
+/* ── MOBILE (até 768px) ── */
 @media (max-width: 768px) {
   nav { padding: 14px 20px; }
   .nav-links, .nav-actions { display: none; }
   .nav-mobile-btn { display: block; }
+
   h1 { letter-spacing: -1px; }
-  .hero-proof { gap: 10px; font-size: 12px; }
+  .hero { padding: 100px 16px 60px; }
+  .hero-proof { gap: 10px; font-size: 12px; flex-direction: column; align-items: center; }
+  .hero-stats { border-radius: 16px; }
   .hero-stat { padding: 14px 20px; border-right: none; border-bottom: 1px solid var(--border); }
   .hero-stat:last-child { border-bottom: none; }
+
+  .section-wrap, .plans-section, .founders-section { padding: 60px 16px; }
+
   .segment-small-grid { grid-template-columns: 1fr 1fr; }
   .segment-featured { min-height: 320px; }
+
+  .features-grid { grid-template-columns: 1fr; border-radius: 16px; }
+  .feature-card { padding: 28px 24px; }
+
   .compare-header, .compare-row { grid-template-columns: 1.8fr 1fr 1.2fr; }
-  .compare-header .compare-cell:nth-child(2), .compare-row .compare-cell:nth-child(2) { display: none; }
-  .newsletter-card { padding: 40px 20px; }
-  .newsletter-benefits { flex-direction: column; gap: 8px; align-items: center; }
-  footer { padding: 24px 20px; flex-direction: column; text-align: center; }
-  .blog-grid { grid-template-columns: 1fr; }
-  .features-grid { grid-template-columns: 1fr; }
+  .compare-header .compare-cell:nth-child(2),
+  .compare-row    .compare-cell:nth-child(2) { display: none; }
+
+  .plans-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .plan-toggle-wrap { gap: 12px; }
+  .price-value { font-size: 2.8rem; }
+
   .founders-faces { flex-direction: column; }
+  .founders-social { flex-direction: column; gap: 10px; }
+  .ig-post { width: 150px; height: 150px; }
+
+  .newsletter-card { padding: 40px 20px; border-radius: 20px; }
+  .newsletter-benefits { flex-direction: column; gap: 8px; align-items: center; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-input { min-width: 100%; }
+
+  .blog-grid { grid-template-columns: 1fr; }
+
+  footer { padding: 24px 20px; flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; gap: 16px; }
 }
+
+/* ── MOBILE XS (até 480px) ── */
 @media (max-width: 480px) {
-  .segment-small-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 2.2rem; letter-spacing: -0.5px; }
+  h2 { font-size: 1.8rem; }
+
+  .hero-badge { font-size: 11px; padding: 5px 14px; text-align: center; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { justify-content: center; }
   .hero-stats { flex-direction: column; }
-  .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
-  .hero-ctas { flex-direction: column; align-items: center; }
+
+  .segment-small-grid { grid-template-columns: 1fr; }
+
   .compare-header, .compare-row { grid-template-columns: 1.5fr 1.2fr; }
-  .compare-header .compare-cell:nth-child(3), .compare-row .compare-cell:nth-child(3) { display: none; }
+  .compare-header .compare-cell:nth-child(3),
+  .compare-row    .compare-cell:nth-child(3) { display: none; }
+  .compare-cell { padding: 12px 14px; font-size: 13px; }
+
+  .plans-section { padding: 48px 12px; }
+  .glass-card { padding: 28px 20px; border-radius: 20px; }
+  .price-value { font-size: 2.4rem; }
+  .plan-badge { font-size: 10px; padding: 4px 14px; }
+
+  .ig-post { width: 130px; height: 130px; border-radius: 12px; }
+
+  .module-chip { padding: 12px 14px; }
+  .module-chip .name { font-size: 12px; }
+
+  .cta-section { padding: 48px 16px 64px; }
+  .cta-section .btn { width: 100%; justify-content: center; }
 }
